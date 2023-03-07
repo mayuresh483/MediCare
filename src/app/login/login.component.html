@@ -1,0 +1,70 @@
+<!-- begin login -->
+<div class="login login-with-news-feed">
+  <!-- begin news-feed -->
+  <div class="news-feed">
+    <!-- ../../../assets/images/loginbg.jpg -->
+    <div class="news-image" style="background-image: url(../../../assets/images/loginbg.jpg)"></div>
+    <div class="news-caption">
+      <h4 class="caption-title"><b>नाप NAAP </b> Measure</h4>
+      <p>
+        Measure the progress of your goal to reach the ambtion.
+      </p>
+    </div>
+  </div>
+  <!-- end news-feed -->
+  <!-- begin right-content -->
+  <div class="right-content">
+    <!-- begin login-header -->
+    <div class="login-header">
+      <div class="brand">
+        <span class="icon"><img src="../../assets/images/logo.svg" alt=""></span> <b> नाप NAAP</b> Measure
+        <small>Gateway to the possibilities</small>
+      </div>
+      <div class="icon">
+        <i class="fa fa-sign-in-alt"></i>
+      </div>
+    </div>
+    <!-- end login-header -->
+    <!-- begin login-content -->
+    <div class="login-content">
+      <form [formGroup]="loginForm" class="margin-bottom-0">
+        <div class="form-group m-b-15">
+          <input type="text" class="form-control form-control-lg" formControlName="email" [(ngModel)]="loginObj.email"
+            [ngClass]="{ 'is-invalid': f['email'].touched && f['email'].errors }" placeholder="Email Address"
+            required />
+          <div *ngIf="f['email'].errors" class="invalid-feedback">
+            <div *ngIf="f['email'].errors['required']"><b>Email is required</b></div>
+            <div *ngIf="f['email'].errors['email']"><b>Email is invalid</b></div>
+          </div>
+        </div>
+        <div class="form-group m-b-15">
+          <input type="password" class="form-control form-control-lg" formControlName="pwd" [(ngModel)]="loginObj.pwd"
+            [ngClass]="{ 'is-invalid': f['pwd'].touched && f['pwd'].errors }" placeholder="Password" required />
+          <div *ngIf="f['pwd'].errors" class="invalid-feedback">
+            <div *ngIf="f['pwd'].errors['required']"><b>Password is required</b></div>
+          </div>
+
+        </div>
+        <div class="checkbox checkbox-css m-b-30">
+          <input type="checkbox" id="remember_me_checkbox" value="" />
+          <label for="remember_me_checkbox">
+          Remember Me
+          </label>
+        </div>
+        <div class="login-buttons">
+          <button type="submit" (click)="onSubmit()" class="btn btn-success btn-block btn-lg">Sign me in</button>
+        </div>
+        <div class="m-t-20 m-b-40 p-b-40 text-inverse">
+          Not a member yet? Click <a routerLink="/registration" class="text-success">here</a> to register.
+        </div>
+        <hr />
+        <p class="text-center text-grey-darker mb-0">
+          &copy; Apical Innovations All Right Reserved 2020
+        </p>
+      </form>
+    </div>
+    <!-- end login-content -->
+  </div>
+  <!-- end right-container -->
+</div>
+<!-- end login -->

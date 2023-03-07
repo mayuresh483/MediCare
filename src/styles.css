@@ -1,1 +1,96 @@
 /* You can add global styles to this file, and also import other style files */
+@import '../src/assets/css/app.min.css';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700';
+@import 'https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.6.1/fullcalendar.min.css';
+/* @import "~bootstrap/dist/css/bootstrap.css"; */
+
+.content {
+    margin-left: 0px;
+     padding: 0px;
+}
+
+.panel .panel-body {
+    padding: 0px;
+}
+
+.page-header-fixed {
+     padding-top: 50px;
+}
+
+.panel .panel-heading .panel-heading-btn {
+    display: flex;
+    align-items: center;
+}
+
+.panel.panel-inverse>.panel-heading {
+    background: #844BFF;
+    color: #fff;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #844BFF;
+    border-color: #844BFF;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #844BFF;
+    border-color: #844BFF;
+    box-shadow: 0;
+}
+
+.header1{
+    left: 50% !important;
+}
+
+.text-success {
+    color: #844BFF!important;
+}
+a {
+    color: #844BFF;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.card-img, .card-img-top {
+    /* border-top-left-radius: 3px; */
+    height: 200px;
+    border-top-right-radius: 3px;
+}
+
+.footer {
+
+     margin: 0 0px 0 0px;
+
+}
+
+
+
+.login.login-with-news-feed .right-content {
+    min-height: 100%;
+     background: none !important;
+    width: 500px;
+    margin-left: auto;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+.panel .panel-heading .panel-title {
+    line-height: 20px;
+    font-size: 12px;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: inherit;
+    display: flex;
+    width: 100% !important;
+    justify-content: space-between;
+}
+
+.btn-danger{
+background-color: #59AAE2;
+}
