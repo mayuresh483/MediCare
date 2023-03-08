@@ -29,7 +29,7 @@
     <div class="login-content">
       <form [formGroup]="loginForm" class="margin-bottom-0">
         <div class="form-group m-b-15">
-          <input type="text" class="form-control form-control-lg" formControlName="email" [(ngModel)]="loginObj.email"
+          <input type="text" class="form-control form-control-lg" formControlName="email"
             [ngClass]="{ 'is-invalid': f['email'].touched && f['email'].errors }" placeholder="Email Address"
             required />
           <div *ngIf="f['email'].errors" class="invalid-feedback">
@@ -38,7 +38,7 @@
           </div>
         </div>
         <div class="form-group m-b-15">
-          <input type="password" class="form-control form-control-lg" formControlName="pwd" [(ngModel)]="loginObj.pwd"
+          <input type="password" class="form-control form-control-lg" formControlName="pwd"
             [ngClass]="{ 'is-invalid': f['pwd'].touched && f['pwd'].errors }" placeholder="Password" required />
           <div *ngIf="f['pwd'].errors" class="invalid-feedback">
             <div *ngIf="f['pwd'].errors['required']"><b>Password is required</b></div>
@@ -46,7 +46,7 @@
 
         </div>
         <div class="checkbox checkbox-css m-b-30">
-          <input type="checkbox" id="remember_me_checkbox" value="" />
+          <input type="checkbox" id="remember_me_checkbox" formControlName="check" value="" />
           <label for="remember_me_checkbox">
           Remember Me
           </label>

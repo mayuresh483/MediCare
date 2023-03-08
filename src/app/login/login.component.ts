@@ -12,21 +12,16 @@ import { global } from '../utility/endpoint';
 })
 export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
-  loginObj:any;
   constructor(private formBuilder: FormBuilder,private route: Router, private service : MediCareServiceService) {}
 
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group(
       {
         email: ['', [Validators.required, Validators.email]],
-        pwd: ['',[Validators.required]]
+        pwd: ['',[Validators.required]],
+        check :['']
       },
     );
-
-    this.loginObj ={
-      "email":"",
-      "pwd":""
-    }
   }
 
   get f(){
@@ -39,10 +34,13 @@ export class LoginComponent implements OnInit {
       return;
     }
    
-    this.service.authCheck(this.loginObj).subscribe((response: any)=>{
+    this.service.authCheck(this.loginForm.value).subscribe((response: any)=>{
       global.showLoading();
       if(response && response.status && response.status == '0'){
         global.hideLoading();
+        if(this.loginForm.value['check'] == true){
+          sessionStorage.setItem("email",JSON.stringify(response.data));
+        }
         this.route.navigate(['/landing']);
       }
       else{
