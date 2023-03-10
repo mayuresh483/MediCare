@@ -22,6 +22,14 @@ export class MediCareServiceService {
     );
     
     return this.http.post(global.authCheck, reqObj, { headers: header }).pipe(map(this.extractData))
+  }
 
+  registerUser(reqObj: any): Observable<any> {
+    let header = new HttpHeaders().set(
+      "Authorization",
+      global.requestToken
+    );
+    
+    return this.http.post(global.registerUser, reqObj, { headers: header }).pipe(map(this.extractData))
   }
 }

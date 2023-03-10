@@ -18,7 +18,8 @@ export const global = {
     Swal.close();
   },
   requestToken : 'a745jasd8k45kasd95k43jads2g',
-  authCheck: HOST_URL + 'auth/getuser'
+  authCheck: HOST_URL + 'auth/getuser',
+  registerUser : HOST_URL + 'auth/registerUser'
 }
 
 

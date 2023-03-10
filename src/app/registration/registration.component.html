@@ -1,0 +1,102 @@
+<!-- begin register -->
+<div class="register register-with-news-feed">
+    <!-- begin news-feed -->
+    <div class="news-feed">
+      <div class="news-image" style="background-image: url(../../../assets/images/registration.jpg)"></div>
+      <div class="news-caption">
+        <div class="news-caption">
+            <h4 class="caption-title"><b>MediCare</b></h4>
+        </div>
+      </div>
+    </div>
+    <!-- end news-feed -->
+    <!-- begin right-content -->
+    <div class="right-content">
+      <!-- begin register-header -->
+      <h1 class="register-header">
+        Sign Up
+        <small>Create your MediCare Account.</small>
+    </h1>
+      <!-- end register-header -->
+      <!-- begin register-content -->
+      <div class="register-content">
+        <form [formGroup]="regForm" class="margin-bottom-0" >
+          <label class="control-label">Name <span class="text-danger">*</span></label>
+          <div class="row row-space-10">
+            <div class="col-md-6 m-b-15">
+              <input type="text" class="form-control " formControlName="fname" placeholder="First name"
+              [ngClass]="{ 'is-invalid': f['fname'].touched && f['fname'].errors }" required />
+              <div *ngIf="f['fname'].errors" class="invalid-feedback">
+                <div *ngIf="f['fname'].errors['required']"><b>First name is required</b></div>
+              </div>
+            </div>
+            <div class="col-md-6 m-b-15">
+              <input type="text" class="form-control" formControlName="lname" placeholder="Last name"
+              [ngClass]="{ 'is-invalid': f['lname'].touched && f['lname'].errors }" required />
+              <div *ngIf="f['lname'].errors" class="invalid-feedback">
+                <div *ngIf="f['lname'].errors['required']"><b>Last name is required</b></div>
+              </div>
+            </div>
+          </div>
+          <label class="control-label">Email <span class="text-danger">*</span></label>
+          <div class="row m-b-15">
+            <div class="col-md-12">
+              <input type="text" class="form-control" formControlName="email" placeholder="Email address"
+              [ngClass]="{ 'is-invalid': f['email'].touched && f['email'].errors }" required />
+              <div *ngIf="f['email'].errors" class="invalid-feedback">
+                <div *ngIf="f['email'].errors['required']"><b>Email is required</b></div>
+                <div *ngIf="f['email'].errors['email']"><b>Email is invalid</b></div>
+              </div>
+            </div>
+          </div>
+          <label class="control-label">Re-enter Email <span class="text-danger">*</span></label>
+          <div class="row m-b-15">
+            <div class="col-md-12">
+              <input type="text" class="form-control" formControlName="remail" placeholder="Re-enter email address"
+              [ngClass]="{ 'is-invalid': f['remail'].touched && f['remail'].errors }" required />
+              <div *ngIf="f['remail'].errors" class="invalid-feedback">
+                <div *ngIf="f['remail'].errors['required']"><b>Email is required</b></div>
+                <div *ngIf="f['remail'].errors['remail']"><b>Email is invalid</b></div>
+                <div *ngIf="f['email'].value != f['remail'].value"><b>Email must be same</b></div>
+              </div>
+            </div>
+          </div>
+          <label class="control-label">Password <span class="text-danger">*</span></label>
+          <div class="row m-b-15">
+            <div class="col-md-12">
+              <input type="password" class="form-control" formControlName="pwd" placeholder="Password"
+              [ngClass]="{ 'is-invalid': f['pwd'].touched && f['pwd'].errors }" required />
+              <div *ngIf="f['pwd'].errors" class="invalid-feedback">
+                <div *ngIf="f['pwd'].errors['required']"><b>Password is required</b></div>
+              </div>
+            </div>
+          </div>
+          <div class="checkbox checkbox-css m-b-30">
+            <div class="checkbox checkbox-css m-b-30">
+              <input type="checkbox" id="agreement_checkbox" formControlName="check" value="">
+              <div *ngIf="f['check'].errors" class="invalid-feedback">
+                <div *ngIf="f['check'].errors['required']"><b>Please accept the agrement</b></div>
+              </div>
+              <label for="agreement_checkbox">
+              By clicking Sign Up, you agree to our <a href="javascript:void(0);" >Terms</a> and that you have read our <a href="javascript:;">Data Policy</a>, including our <a href="javascript:;">Cookie Use</a>.
+              </label>
+            </div>
+          </div>
+          <div class="register-buttons">
+            <button type="submit" (click)="onSubmit()" class="btn btn-primary btn-block btn-lg">Sign Up</button>
+          </div>
+          <div class="m-t-30 m-b-30 p-b-30">
+            Already a member? Click <a routerLink="/login">here</a> to login.
+          </div>
+          <hr />
+          <p class="text-center mb-0">
+            &copy; Apical Innovations All Right Reserved 2020
+          </p>
+        </form>
+      </div>
+      <!-- end register-content -->
+    </div>
+    <!-- end right-content -->
+  </div>
+  <!-- end register -->
+  

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { MediCareServiceService } from '../service/medi-care-service.service';
@@ -12,15 +12,16 @@ import { global } from '../utility/endpoint';
 })
 export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
-  constructor(private formBuilder: FormBuilder,private route: Router, private service : MediCareServiceService) {}
+  constructor(private route: Router, private service : MediCareServiceService) {}
 
   ngOnInit(): void {
-    this.loginForm = this.formBuilder.group(
+    debugger
+    this.loginForm = new FormGroup(
       {
-        email: ['', [Validators.required, Validators.email]],
-        pwd: ['',[Validators.required]],
-        check :['']
-      },
+        email: new FormControl('', [Validators.required, Validators.email]),
+        pwd: new FormControl('',[Validators.required]),
+        check :new FormControl('')
+      }
     );
   }
 
@@ -29,8 +30,8 @@ export class LoginComponent implements OnInit {
   }
 
   public onSubmit() {
-    debugger
     if (this.loginForm.invalid) {
+      Swal.fire('Error', "Invalid Data", 'error');
       return;
     }
    
