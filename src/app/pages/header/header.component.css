@@ -1,0 +1,55 @@
+.envelope-img {
+    filter: brightness(10)
+  }
+  .body{
+    min-height:50vh;
+    display: flex;
+  }
+  .left{
+    width: 45vw;
+    background-image: linear-gradient(to top right, rgb(140, 59, 187) , rgb(103, 52, 243));
+  }
+  .right{
+    width: 55vw;
+  }
+  
+  fieldset{
+    background-color: white;
+  }
+  
+  
+  
+  input {
+    margin: .4rem;
+  }
+  .lab{
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  .badge {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 8px 6px;
+    border: 1px solid transparent;
+    min-width: 10px;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border-radius:0.2rem;
+  }
+  .badge.badge-outlined {
+    background-color: transparent
+  }
+  .badge.badge-outlined.badge-success {
+    border-color: #08bdc4;
+    color:#08bdc4;
+    border: none;
+  }
+  
+  .badge.badge-outlined.badge-warning {
+    color:  #f3cd12;
+    background-color: rgb(247, 255, 211);
+  }
+  

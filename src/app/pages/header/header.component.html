@@ -1,0 +1,168 @@
+<div class="super_container">
+    <div class="header1 d-flex flex-row">
+        <div class="header_content d-flex flex-row align-items-center">
+
+            <div class="logo_container">
+                <div class="logo">
+                    <img src="../../../assets/images/logo.svg" alt="">
+                    <span>NAAP</span>
+                </div>
+            </div>
+
+
+            <nav class="main_nav_container">
+                <div class="main_nav">
+                    <ul class="main_nav_list">
+                        <li class="main_nav_item"><a href="javascript:;">Home</a></li>
+                        <li class="main_nav_item"><a href="javascript:;">Boards</a></li>
+                        <li class="main_nav_item"><a href="javascript:;">Features</a></li>
+                        <!-- <li class="main_nav_item"><a href="javascript:;" routerLink="/adminSubject">Subject</a></li> -->
+                        <!-- <li class="main_nav_item"><a href="javascript:;" routerLink="/adminqustns">Questions</a></li> -->
+                        <!-- <li class="main_nav_item"><a href="javascript:;" routerLink="/test">Test</a></li> -->
+                        <!-- <li class="main_nav_item"><a href="javascript:;" routerLink='/board-subject'>Boards & Subject</a></li> -->
+                        <!-- <li class="main_nav_item"><a href="javascript:;" routerLink='/question-bank'>Question Bank</a></li>
+                  <li class="main_nav_item"><a href="javascript:;" routerLink='/question-list'>Question List</a></li>
+                  <li class="main_nav_item"><a href="javascript:;" (click)="add(content)">Practice</a></li>
+                  <li class="main_nav_item"><a href="javascript:;" (click)="add2(content2)">Practice2</a></li>
+                  <li class="main_nav_item"><a href="javascript:;" (click)="add3(content3)">Practice2</a></li>
+
+
+
+                <li class="main_nav_item"><a href="javascript:;" routerLink="/login">My Place</a></li> -->
+                    </ul>
+                </div>
+
+            </nav>
+        </div>
+        <div class="header_side d-flex flex-row justify-content-center align-items-center">
+
+            <img src="assets/images/envelope.svg" class="envelope-img" alt="">
+            <span>contact@naap.in</span>
+        </div>
+
+
+
+        <div class="hamburger_container">
+            <i class="fas fa-bars trans_200"></i>
+        </div>
+        <ng-template #content let-c="close" let-d="dismiss">
+            <div class="body">
+                <div class="left">
+                </div>
+                <div class="right" style="padding: 3.5rem 4rem;">
+                    <h3>Enter your mobile</h3>
+                    <h3>number to start learning</h3>
+                    <!-- <ngx-intl-tel-input [cssClass]="'custom'" [preferredCountries]="preferredCountries"
+                            [enableAutoCountrySelect]="true" [enablePlaceholder]="true" [searchCountryFlag]="true"
+                            [searchCountryField]="[SearchCountryField.Iso2, SearchCountryField.Name]" [selectFirstCountry]="false"
+                            [selectedCountryISO]="CountryISO.India" [maxLength]="15"
+                            [phoneValidation]="true" [separateDialCode]="separateDialCode"
+                            [numberFormat]="PhoneNumberFormat.National" name="phone" formControlName="phone">
+                          </ngx-intl-tel-input> -->
+                    <h5 style="color: rgb(30, 118, 121);margin-top: 0.7rem;">We will send you a confirmation code</h5>
+                    <input type="tel" class="form-control" style="margin-top: 2.2rem;">
+                    <button class="btn btn-lg btn-block btn-success mt-3">CONTINUE</button><br>
+                    <p style="margin-top: 2.2rem;" class="text-right">Already have an account?<strong>Use Email</strong>
+                    </p>
+                </div>
+            </div>
+        </ng-template>
+
+        <ng-template #content2 let-c="close" let-d="dismiss">
+            <div style="padding-top: 2rem;background: rgb(235, 235, 235);">
+                <fieldset style="background:white;">
+                    <legend><img src="../../../assets/images/logo.svg" width="10%"
+                            style="border: 1px solid rgb(255, 255, 255);border-radius: 50%; padding: 0 0.5rem;background: white;margin-left: 1.8rem;">
+                    </legend>
+                    <div class="container-fluid my-4">
+                        <div class="form-row mx-2">
+                            <div class="form-group col-md-6">
+                                <label class="mx-1 lab">First Name</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label class="mx-1 lab">Last Name</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-row mx-2">
+                            <div class="form-group col-md-6">
+                                <label class="mx-1 lab">Email Address</label>
+                                <div class="badge badge-success badge-outlined"><i class="fa fa-check"
+                                        aria-hidden="true"></i>&nbsp;&nbsp;verified</div>
+                                <input type="email" class="form-control">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label class="mx-1 lab">Phone Number</label>
+                                <div class="badge badge-warning badge-outlined"><i class="fa fa-exclamation-triangle"
+                                        aria-hidden="true"></i>&nbsp;&nbsp;verify now</div>
+                                <input type="tel" class="form-control">
+                            </div>
+                        </div>
+                        <div class="fom-row mx-3">
+                            <div class="form-group">
+                                <label class="mx-1 lab">Location</label>
+                                <input type="text" class="form-control " placeholder="Type and select city">
+                            </div>
+
+                        </div>
+                        <div class="row float-right my-4">
+                            <a></a><button class="btn btn-md btn-white px-4">DISCARD</button><br>
+                            <button class="btn btn-md btn-success mx-4 px-4">SAVE CHANGES</button><br>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </ng-template>
+
+        <ng-template #content3 let-c="close" let-d="dismiss">
+            <div class="container" style="padding: 1rem 2rem;">
+                <div class="card m-auto" style="width: 30rem; border: none;">
+                    <div class="text-center">
+                        <img src="../../../assets/NaaP_svg/clip-work-process.svg" width="20%">
+                    </div>
+                    <h3 class="text-center" style="margin-top: 0.8rem;">You are not enrolled in any course!</h3>
+                    <div class="text-center container">
+                        <p style="font-size: 1rem">You can view information about our courses from the link below.</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-9 m-auto">
+                            <button class="btn btn-lg btn-block btn-success">SAVE CHANGES</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </div>
+
+
+    <div class="menu_container menu_mm">
+
+
+        <div class="menu_close_container">
+            <div class="menu_close"></div>
+        </div>
+
+        <div class="menu_inner menu_mm">
+            <div class="menu menu_mm">
+                <ul class="menu_list menu_mm">
+                    <li class="menu_item menu_mm"><a href="javascript:;">Home</a></li>
+                    <li class="menu_item menu_mm"><a href="javascript:;">Boards</a></li>
+                    <li class="menu_item menu_mm"><a href="javascript:;">Features</a></li>
+                    <li class="menu_item menu_mm"><a href="javascript:;" routerLink="/login">My Place</a></li>
+                </ul>
+
+
+
+                <div class="menu_social_container menu_mm">
+                    <ul class="menu_social menu_mm">
+                        <li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
